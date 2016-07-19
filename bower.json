@@ -1,7 +1,7 @@
 {
   "name": "ng-interview",
   "description": "A sample AngularJS app for developer candidates",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/ImagineLearning/ng-interview",
   "license": "MIT",
   "private": true,
