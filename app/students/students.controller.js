@@ -7,11 +7,22 @@
 
 	StudentsController.$inject = [];
 	function StudentsController() {
+
+		/**
+		 * Model
+		 */
+
 		var vm = this;
+
+		/**
+		 * Initialization
+		 */
 
 		activate();
 
-		////////////////
+		/**
+		 * Implementations
+		 */
 
 		function activate() {
 			// Initialization code goes here

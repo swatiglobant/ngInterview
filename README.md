@@ -71,26 +71,32 @@ Now browse to the app at `http://localhost:8000/index.html`.
 
 ```
 app/                           --> all of the source files for the application
-  app.css                        --> default stylesheet
   components/                    --> all app specific modules
-    current-date/                  --> all current date related components
-      current-date.module.js         --> current date module declaration
-      current-date.service.js        --> simple service for returning the current date
+    api/                           --> all services for interacting with APIs
+      students/                      --> service for interacting with students API
+        students.module.js             --> students service module declaration
+        students.service.js            --> implementation of students service
+        students.service.spec.js       --> unit tests for students service
+      api.module.js                  --> api module declaration
+    current-date/                  --> a simple sample component
       current-date.directive.js      --> directive to insert the current date in an element
       current-date.directive.spec.js --> unit tests for current date directive
+      current-date.module.js         --> current date module declaration
+      current-date.service.js        --> simple service for returning the current date
   students/                      --> students view template and logic
     students.html                  --> the partial template
-    students.module.js             --> students module declaration
     students.config.js             --> configuration and routes for the students module
     students.controller.js         --> the controller logic
-    students.controller.spec       --> unit tests for the controller
-  app.module.js                  --> main application module declaration
+    students.controller.spec.js    --> unit tests for the controller
+    students.module.js             --> students module declaration
   app.config.js                  --> main configuration of application
+  app.module.js                  --> main application module declaration
+  app.css                        --> default stylesheet
   index.html                     --> app layout file (the main html template file of the app)
-karma.conf.js                  --> config file for running unit tests with Karma
 e2e-tests/                     --> end-to-end tests
   protractor-conf.js             --> Protractor config file
   scenarios.js                   --> end-to-end scenarios to be run by Protractor
+karma.conf.js                  --> config file for running unit tests with Karma
 ```
 
 ## Testing
