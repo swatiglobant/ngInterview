@@ -1,5 +1,14 @@
 # ng-interview — a sample AngularJS app
 
+## TL;DR
+
+1. Fork the ng-interview repository on [GitHub][ng-interview]
+2. Run `npm install`
+3. Run `npm start`
+4. Browse to [http://localhost:8000](http://localhost:8000/index.html)
+
+## Introduction
+
 This project is a simple [AngularJS](http://angularjs.org/) web app for front end developer candidates,
 based on the [angular-seed](https://github.com/angular/angular-seed) project.
 
@@ -21,14 +30,11 @@ You need git to clone the ng-interview repository. You can get git from
 We also use a number of node.js tools to initialize and test ng-interview. You must have node.js and
 its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
-### Clone ng-interview
+### Fork ng-interview
 
-Clone the ng-interview repository using [git][git]:
+Fork the ng-interview repository on [GitHub][ng-interview].
 
-```
-git clone https://github.com/ImagineLearning/ng-interview.git
-cd ng-interview
-```
+If you are unfamiliar with forking, [follow these instructions](http://lmgtfy.com/?q=how+to+fork+a+repo+in+github).
 
 ### Install Dependencies
 
@@ -67,22 +73,27 @@ Now browse to the app at `http://localhost:8000/index.html`.
 
 
 
-## Directory Layout
+## Structure and Patterns
+
+### Foder Structure
+
+The application uses a folders-by-feature structure to keep the code modular. 
 
 ```
 app/                           --> all of the source files for the application
-  components/                    --> all app specific modules
+  components/                    --> all app-specific components
+    current-date/                  --> a simple sample component
+      current-date.directive.js      --> directive to insert the current date in an element
+      current-date.directive.spec.js --> unit tests for current date directive
+      current-date.module.js         --> current date module declaration
+      current-date.service.js        --> simple service for returning the current date
+  services/                      --> all app-specific services
     api/                           --> all services for interacting with APIs
       students/                      --> service for interacting with students API
         students.module.js             --> students service module declaration
         students.service.js            --> implementation of students service
         students.service.spec.js       --> unit tests for students service
       api.module.js                  --> api module declaration
-    current-date/                  --> a simple sample component
-      current-date.directive.js      --> directive to insert the current date in an element
-      current-date.directive.spec.js --> unit tests for current date directive
-      current-date.module.js         --> current date module declaration
-      current-date.service.js        --> simple service for returning the current date
   students/                      --> students view template and logic
     students.html                  --> the partial template
     students.config.js             --> configuration and routes for the students module
@@ -98,6 +109,10 @@ e2e-tests/                     --> end-to-end tests
   scenarios.js                   --> end-to-end scenarios to be run by Protractor
 karma.conf.js                  --> config file for running unit tests with Karma
 ```
+
+### Style Guide
+
+The project follows the patterns and conventions outlined in [John Papa's Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
 
 ## Testing
 
@@ -180,3 +195,4 @@ For more information on AngularJS please check out http://angularjs.org/
 [jasmine]: http://jasmine.github.io
 [karma]: http://karma-runner.github.io
 [http-server]: https://github.com/nodeapps/http-server
+[ng-interview]: https://github.com/ImagineLearning/ng-interview
