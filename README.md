@@ -24,17 +24,19 @@ To get you started you can simply clone the ng-interview repository and install 
 
 ### Prerequisites
 
-You need git to clone the ng-interview repository. You can get git from
+You need to have git installed locally so you can clone your fork of the ng-interview repository. You can get git from
 [http://git-scm.com/](http://git-scm.com/).
 
 We also use a number of node.js tools to initialize and test ng-interview. You must have node.js and
 its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
-### Fork ng-interview
+### Fork and clone ng-interview
 
 Fork the ng-interview repository on [GitHub][ng-interview].
 
 If you are unfamiliar with forking, [follow these instructions](http://lmgtfy.com/?q=how+to+fork+a+repo+in+github).
+
+Now clone your repository locally, [follow these instructions if you decide you need help](http://lmgtfy.com/?q=how+to+clone+a+git+repository).
 
 ### Install Dependencies
 
@@ -182,6 +184,10 @@ npm run protractor
 
 This script will execute the end-to-end tests against the application being hosted on the
 development server.
+
+## Submittal
+
+Submit a pull request once you have made the necessary additions or changes and have added tests to validate your changes. I would provide you a link but I'm guessing you know what to do now.
 
 ## Contact
 
