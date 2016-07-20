@@ -4,7 +4,7 @@ describe('ngInterview.currentDate', function() {
 
 	var $compile,
 		$scope,
-		date = new Date(Date.parse('2016-07-01T23:00:00Z')),
+		date = new Date(Date.parse('2016-07-01T12:00:00Z')),
 		currentDateService = {
 			get: function() {
 				return date;

@@ -1,11 +1,13 @@
 # ng-interview — a sample AngularJS app
 
+
 ## TL;DR
 
-1. Fork the ng-interview repository on [GitHub][ng-interview]
+1. Fork the [ng-interview][ng-interview] repository on GitHub
 2. Run `npm install`
 3. Run `npm start`
 4. Browse to [http://localhost:8000](http://localhost:8000/index.html)
+
 
 ## Introduction
 
@@ -20,7 +22,7 @@ The app doesn't do much, that part is up to the applicant.
 
 ## Getting Started
 
-To get you started you can simply clone the ng-interview repository and install the dependencies:
+To get you started you can simply fork the [ng-interview][ng-interview] repository, clone it locally, and install the dependencies.
 
 ### Prerequisites
 
@@ -30,13 +32,19 @@ You need to have git installed locally so you can clone your fork of the ng-inte
 We also use a number of node.js tools to initialize and test ng-interview. You must have node.js and
 its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
-### Fork and clone ng-interview
+### Fork and Clone ng-interview
 
-Fork the ng-interview repository on [GitHub][ng-interview].
-
+Fork the [ng-interview][ng-interview] repository on GitHub.
 If you are unfamiliar with forking, [follow these instructions](http://lmgtfy.com/?q=how+to+fork+a+repo+in+github).
 
-Now clone your repository locally, [follow these instructions if you decide you need help](http://lmgtfy.com/?q=how+to+clone+a+git+repository).
+Then clone your repository locally using [git][git]:
+
+```
+git clone https://github.com/YOUR-USERNAME/ng-interview.git
+cd ng-interview
+```
+
+*Note: Be sure to replace the URL with the correct URL to your forked repository.*
 
 ### Install Dependencies
 
@@ -74,10 +82,9 @@ npm start
 Now browse to the app at `http://localhost:8000/index.html`.
 
 
-
 ## Structure and Patterns
 
-### Foder Structure
+### Folder Structure
 
 The application uses a folders-by-feature structure to keep the code modular. 
 
@@ -185,13 +192,10 @@ npm run protractor
 This script will execute the end-to-end tests against the application being hosted on the
 development server.
 
-## Submittal
-
-Submit a pull request once you have made the necessary additions or changes and have added tests to validate your changes. I would provide you a link but I'm guessing you know what to do now.
 
 ## Contact
 
-For more information on AngularJS please check out http://angularjs.org/
+For more information on AngularJS please check out [http://angularjs.org/](http://angularjs.org/)
 
 [git]: http://git-scm.com/
 [bower]: http://bower.io
