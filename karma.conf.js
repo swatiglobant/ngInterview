@@ -23,7 +23,7 @@ module.exports = function(config) {
 			'PhantomJS'
 		],
 
-		reporters: ['spec'],
+		reporters: ['coverage', 'spec'],
 
 		plugins: [
 			'karma-chrome-launcher',
@@ -31,12 +31,23 @@ module.exports = function(config) {
 			'karma-phantomjs-launcher',
 			'karma-jasmine',
 			'karma-junit-reporter',
-			'karma-spec-reporter'
+			'karma-spec-reporter',
+			'karma-coverage'
 		],
 
+		preprocessors: {
+			'app.*.js': ['coverage'],
+			'!(bower_components)/**/*.js': ['coverage']
+		},
+
 		junitReporter: {
-			outputFile: 'test_out/unit.xml',
+			outputFile: '../test_out/unit.xml',
 			suite: 'unit'
+		},
+
+		coverageReporter: {
+			dir: '../test_out/',
+			type: 'html'
 		}
 
 	});
