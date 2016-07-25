@@ -23,7 +23,10 @@ module.exports = function(config) {
 			'PhantomJS'
 		],
 
-		reporters: ['coverage', 'spec'],
+		reporters: [
+			// 'coverage',
+			'spec'
+		],
 
 		plugins: [
 			'karma-chrome-launcher',
