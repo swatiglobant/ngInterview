@@ -10,6 +10,8 @@
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
     "jasmine-reporters": "^2.2.0",
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.2",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
     "karma-coverage": "^1.1.0",
