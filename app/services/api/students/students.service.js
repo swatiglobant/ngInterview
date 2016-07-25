@@ -3,7 +3,7 @@
 
 	angular
 		.module('ngInterview.api.students')
-		.service('studentsService', StudentsService);
+		.service('StudentsService', StudentsService);
 
 	StudentsService.$inject = [];
 	function StudentsService() {
