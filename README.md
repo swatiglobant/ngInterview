@@ -123,7 +123,7 @@ karma.conf.js                  --> config file for running unit tests with Karma
 
 The project follows the patterns and conventions outlined in [John Papa's Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
 
-You will notice each component consists of multiple files. This is an application of the [Rule of 1](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y001),
+You will notice each module is comprised of multiple files. This is an application of the [Rule of 1](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y001),
 which recommends you define 1 component per file.
 
 Also take note of the section on [manually identifying dependencies](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#style-y091)
