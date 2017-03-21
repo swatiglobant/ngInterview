@@ -18,6 +18,17 @@ describe('ngInterview.students module', function() {
 			expect(studentsCtrl).toBeDefined();
 		});
 
+		it('should set a default value for the `Students` model', function() {
+			var studentsCtrl = $controller('StudentsController');
+      expect(studentsCtrl.Students.length).toBe(0);
+    });
+
+		it('should set a default value for the `orderByValue` model', function() {
+			var studentsCtrl = $controller('StudentsController');
+      expect(studentsCtrl.orderByValue).toBe('firstname');
+    });
+
+
 	});
 
 });
