@@ -1,4 +1,28 @@
 <h2>Students</h2>
-<ul>
-	<li>Here are your students...</li>
-</ul>
+
+<p>
+	<span class="col col-sm-9 col-md-9 col-lg-9">Search: <input placeholder="search by movie" ng-model="vm.query"/></span>
+	<span class="col col-sm-2 col-md-2 col-lg-2 btn btn-primary" ng-click="vm.searchStudent()">Search</span>
+</p>
+
+<div>
+	<table class="table" ng-if="vm.Students.length > 0">
+		<tr>
+			<th ng-click="vm.setOrderByValue('firstname')">First Name</th>
+			<th ng-click="vm.setOrderByValue('lastname')">Last Name</th>
+			<th ng-click="vm.setOrderByValue('favaritefood')">Favarite food</th>
+			<th ng-click="vm.setOrderByValue('favaritecolor')">Favarite Color</th>
+			<th ng-click="vm.setOrderByValue('favaritemovie')">Favarite Movie</th>
+		</tr>
+		<tr ng-repeat="student in vm.Students | orderBy:vm.orderByValue">
+			<td>{{student.firstname}}</td>
+			<td>{{student.lastname}}</td>
+			<td>{{student.favaritefood}}</td>
+			<td>{{student.favaritecolor}}</td>
+			<td>{{student.favaritemovie}}</td>
+		</tr>
+	</table>
+	<p class="text-info" ng-if="vm.Students.length == 0">
+		No Records to display!!
+	</p>
+</div>
