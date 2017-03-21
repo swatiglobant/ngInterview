@@ -1,28 +1,72 @@
 <h2>Students</h2>
-<p>
-	Search: <input ng-model="vm.query"/>
+
+<p class="">
+	<span class="col col-sm-9 col-md-9 col-lg-9">Search: <input ng-model="vm.query"/></span>
+	<span class="col col-sm-2 col-md-2 col-lg-2 btn btn-primary" ng-click="vm.addStudentOnClick()">Add Student</span>
 </p>
 
-<table class="table" ng-if="vm.Students.length > 0">
-	<tr>
-		<th ng-click="vm.setOrderByValue('firstname')">First Name</th>
-		<th ng-click="vm.setOrderByValue('lastname')">Last Name</th>
-		<th ng-click="vm.setOrderByValue('favaritefood')">Favarite food</th>
-		<th ng-click="vm.setOrderByValue('favaritecolor')">Favarite Color</th>
-		<th ng-click="vm.setOrderByValue('favaritemovie')">Favarite Movie</th>
-		<th >Remove Student</th>
-	</tr>
-	<tr ng-repeat="student in vm.Students | filter:vm.query | orderBy:vm.orderByValue">
-		<td>{{student.firstname}}</td>
-		<td>{{student.lastname}}</td>
-		<td>{{student.favaritefood}}</td>
-		<td>{{student.favaritecolor}}</td>
-		<td>{{student.favaritemovie}}</td>
-		<td>
-			<a ng-click=vm.removeStudent(student.id)>Remove</a>
-		</td>
-	</tr>
-</table>
-<p class="text-info" ng-if="vm.Students.length == 0">
-	No Records to display!!
-</p>
+<div class="">
+	<table class="table" ng-if="vm.Students.length > 0">
+		<tr>
+			<th ng-click="vm.setOrderByValue('firstname')">First Name</th>
+			<th ng-click="vm.setOrderByValue('lastname')">Last Name</th>
+			<th ng-click="vm.setOrderByValue('favaritefood')">Favarite food</th>
+			<th ng-click="vm.setOrderByValue('favaritecolor')">Favarite Color</th>
+			<th ng-click="vm.setOrderByValue('favaritemovie')">Favarite Movie</th>
+			<th >Remove Student</th>
+		</tr>
+		<tr ng-repeat="student in vm.Students | filter:vm.query | orderBy:vm.orderByValue">
+			<td>{{student.firstname}}</td>
+			<td>{{student.lastname}}</td>
+			<td>{{student.favaritefood}}</td>
+			<td>{{student.favaritecolor}}</td>
+			<td>{{student.favaritemovie}}</td>
+			<td>
+				<a ng-click=vm.removeStudent(student.id)>Remove</a>
+			</td>
+		</tr>
+	</table>
+	<p class="text-info" ng-if="vm.Students.length == 0">
+		No Records to display!!
+	</p>
+</div>
+<form class="form" name="form" ng-show="vm.addStudentClick">
+	<h4>Add new Student</h4>
+	<div class="form-group">
+	  <label class="control-label">First name <span class="required">*</span></label>
+	  <div>
+			<input type="text" name="first_name" class="form-control" ng-model="vm.student.firstname" required="true" placeholder="firstname">
+	  </div>
+  </div>
+	<div class="form-group">
+		<label class="control-label">Last name <span class="required">*</span></label>
+		<div>
+			<input type="text" name="last_name" class="form-control" ng-model="vm.student.lastname" required="true" placeholder="lastname">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Favarite Food</label>
+		<div>
+			<input type="text" name="fav_food" class="form-control" ng-model="vm.student.favaritefood" placeholder="Favarite Food">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label">Favarite Color</label>
+		<div>
+			<input type="text" name="fav_color" class="form-control" ng-model="vm.student.favaritecolor" placeholder="Favarite Color">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label" >Favarite Movie</label>
+		<div>
+			<input type="text" name="fav_movie" class="form-control" ng-model="vm.student.favaritemovie" placeholder="Favarite Movie">
+		</div>
+	</div>
+
+	<div class="form-group">
+	  <div class="pull-right">
+			<button type="button" class="btn btn-default" ng-click="vm.addStudentOnClose()"> Close</button>
+	  	<button type="submit" class="btn btn-primary" ng-click="vm.addStudent()">Submit</button>
+		</div>
+	</div>
+</form>
