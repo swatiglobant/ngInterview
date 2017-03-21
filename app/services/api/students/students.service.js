@@ -9,8 +9,7 @@
 	function StudentsService($q, $http) {
 
 		this.getStudents = getStudents;
-		this.deleteStudent = deleteStudent;
-		this.addStudent = addStudent;
+		this.searchStudent = searchStudent;
 
 		function getStudents() {
       var q = $q.defer();
@@ -23,25 +22,13 @@
 			return q.promise;
 		}
 
-		function deleteStudent(studentId) {
+		function searchStudent(query) {
 			var q = $q.defer();
-			var request = $http({
-				method: 'DELETE',
-				// url: 'http://localhost:5000'+'/students',
-				url: 'http://demo1634462.mockable.io'+'/students/'+ studentId
-			});
-			q.resolve(request);
-			return q.promise;
-		}
-
-		function addStudent(data) {
-			var q = $q.defer();
-			var request = $http({
-				method: 'POST',
-				// url: 'http://localhost:5000'+'/students',
-				url: 'http://demo1634462.mockable.io'+'/students/',
-				data: { student: data }
-			});
+      var request = $http({
+        method: 'GET',
+        // url: 'http://localhost:5000'+'/students',
+        url: 'http://demo1634462.mockable.io'+'/students?movie=' +query
+      });
 			q.resolve(request);
 			return q.promise;
 		}
