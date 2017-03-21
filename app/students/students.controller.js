@@ -5,8 +5,8 @@
 		.module('ngInterview.students')
 		.controller('StudentsController', StudentsController);
 
-	StudentsController.$inject = ['$scope','StudentsService'];
-	function StudentsController($scope, StudentsService) {
+	StudentsController.$inject = ['StudentsService'];
+	function StudentsController(StudentsService) {
 
 		var vm = this;
 		activate();
