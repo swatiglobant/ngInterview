@@ -5,21 +5,33 @@
 		.module('ngInterview.api.students')
 		.service('StudentsService', StudentsService);
 
-	StudentsService.$inject = [];
-	function StudentsService() {
+	StudentsService.$inject = ['$q','$http'];
+	function StudentsService($q, $http) {
 
-		/**
-		 * Exposed functions
-		 */
+		this.getStudents = getStudents;
+		this.deleteStudent = deleteStudent;
 
-		this.getName = getName; // This function serves no purpose. It's just here as an example.
-
-		/**
-		 * Implementations
-		 */
-
-		function getName() {
-			return 'studentsService';
+		function getStudents() {
+      var q = $q.defer();
+      var request = $http({
+        method: 'GET',
+        // url: 'http://localhost:5000'+'/students',
+        url: 'http://demo1634462.mockable.io'+'/students',
+      });
+			q.resolve(request);
+			return q.promise;
 		}
+
+		function deleteStudent(studentId) {
+			var q = $q.defer();
+			var request = $http({
+				method: 'DELETE',
+				// url: 'http://localhost:5000'+'/students',
+				url: 'http://demo1634462.mockable.io'+'/students/'+ studentId,
+			});
+			q.resolve(request);
+			return q.promise;
+		}
+
 	}
 })();
